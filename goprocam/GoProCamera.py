@@ -832,6 +832,7 @@ class GoPro:
 				print(self.gpControlExecute('p1=gpStream&a1=proto_v2&c1=stop'))
 			else:
 				print(self.sendCamera("PV","00"))
+		self.KeepAlive()
 	def stream(self, addr, quality=""):
 		self.livestream("start")
 		if self.whichCam() == "gpcontrol":
